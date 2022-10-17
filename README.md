@@ -7,7 +7,7 @@ It is quite possibly the lowest-cost 3D scanner currently available.
 Hardware List: 
 - Arduino Nano
 - 1 to 4 line lase
--a a micro geared stepper (28BYJ-48)
+- a a micro geared stepper (28BYJ-48)
 - Hercule HD Twist webcam
 
 This software is written in C# and Winforms, and is based on a system of tasks and processes.
