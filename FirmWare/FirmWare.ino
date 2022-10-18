@@ -156,6 +156,84 @@ void LaserCommand()
    }
 }
 
+void G01()
+/*G01 [T(steps)] - Move the Turntable for number of steps*/
+{
+	 char *arg; 
+	 arg = SCmd.next(); 
+	 if (arg != NULL) 
+	 {
+		 if(arg[0]=='T'||arg[0]=='t') // G01 T
+		 {
+                    char *arg2 = SCmd.next(); 
+                    int pos=atoi(arg2);
+                    stepper1.move(RotationToSteps(pos));
+                    stepper1.runToPosition();
+		    Serial.print("RELATIVE ROTATION :"); 
+		    Serial.print(pos); 
+		    Serial.print(" => "); 
+		    Serial.println(StepsToRotation(stepper1.currentPosition())); 
+		 }
+                 else
+                 {
+		    Serial.print("Unknown Table command :"); 
+		    Serial.println(arg); 
+                 }
+	 } 
+         else 
+	 {
+             Serial.print("Position "); 
+             Serial.println(StepsToRotation(stepper1.currentPosition())); 
+         }
+}
+
+void M04()
+/*M4 [R(value) G(value) B(value)] - Turn on LED Ring for given RGB-Vlaues*/
+{
+
+}
+
+void M17()
+/*M17 - Enable Motors*/
+{
+
+}
+
+void M18()
+/*M18 - Disable Motors*/
+{
+
+}
+
+void M19()
+/*M19 - Turn On Laser 0*/
+{
+
+}
+
+void M20()
+/*M20 - Turn Off Laser 0*/
+{
+
+}
+
+void M21()
+/*M21 - Turn On Laser 1*/
+{
+
+}
+
+void M22()
+/*M22 - Turn Off Laser 1*/
+{
+
+}
+
+void M100()
+/*M100 - Show Help Message*/
+{
+
+}
 
 
 void setup() {
@@ -179,10 +257,24 @@ void setup() {
   SCmd.addCommand("t",TableCommand);
   SCmd.addCommand("L",LaserCommand);
   SCmd.addCommand("l",LaserCommand);
-  SCmd.addCommand("G",Gcode);
-  SCmd.addCommand("g",Gcode);
-  SCmd.addCommand("M",Gcode);
-  SCmd.addCommand("m",Gcode);
+  SCmd.addCommand("G01",G01);
+  SCmd.addCommand("g01",G01);
+  SCmd.addCommand("M04",Mcode);
+  SCmd.addCommand("m04",Mcode);
+  SCmd.addCommand("M17",Mcode);
+  SCmd.addCommand("m17",Mcode);
+  SCmd.addCommand("M18",Mcode);
+  SCmd.addCommand("m18",Mcode);
+  SCmd.addCommand("M19",Mcode);
+  SCmd.addCommand("m19",Mcode);
+  SCmd.addCommand("M20",Mcode);
+  SCmd.addCommand("m20",Mcode);
+  SCmd.addCommand("M21",Mcode);
+  SCmd.addCommand("m21",Mcode);
+  SCmd.addCommand("M22",Mcode);
+  SCmd.addCommand("m22",Mcode);
+  SCmd.addCommand("M100",Mcode);
+  SCmd.addCommand("m100",Mcode);
   SCmd.addDefaultHandler(Hun);
   Serial.println(FIRMWARE_VERSION);
   Serial.flush();
