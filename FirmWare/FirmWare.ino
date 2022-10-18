@@ -156,6 +156,8 @@ void LaserCommand()
    }
 }
 
+// FabScanPi
+
 void G01()
 /*G01 [T(steps)] - Move the Turntable for number of steps*/
 {
@@ -254,7 +256,6 @@ void M100()
     Serial.println("M22 - Turn Off Laser 1");
     Serial.println("M100 - Show Help Message");
 }
-
 
 void setup() {
   stepper1.setMaxSpeed(500.0);
