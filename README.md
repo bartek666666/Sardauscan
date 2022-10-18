@@ -39,12 +39,12 @@ Since horus is aparently dead, im adding support for other scanners to the turnt
 
 Supported G-Codes:
 
-- G01 [T(steps)] - Move the Turntable for number of steps (not yet)
+- G01 [T(steps)] - Move the Turntable for number of steps (needs testing)
 - M4 [R(value) G(value) B(value)] - Turn on LED Ring for given RGB-Vlaues (not yet)
-- M17 - Enable Motors (not yet)
-- M18 - Disable Motors (not yet)
-- M19 - Turn On Laser 0 (not yet)
-- M20 - Turn Off Laser 0 (not yet)
-- M21 - Turn On Laser 1 (not yet)
-- M22 - Turn Off Laser 1 (not yet)
-- M100 - Show Help Message (not yet)
+- M17 - Enable Motors (needs testing)
+- M18 - Disable Motors (needs testing)
+- M19 - Turn On Laser 0 (needs testing)
+- M20 - Turn Off Laser 0 (nneeds testing)
+- M21 - Turn On Laser 1 (needs testing)
+- M22 - Turn Off Laser 1 (needs testing)
+- M100 - Show Help Message (needs testing)
