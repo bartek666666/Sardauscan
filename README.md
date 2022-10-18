@@ -35,7 +35,7 @@ https://github.com/adafruit/AccelStepper
 
 Since horus is aparently dead, im adding support for other scanners to the turntable. If you have any specific scanner you want to add Pm me.
 
-# FabScanPi (WIP)
+# [FabScanPi](https://fabscan.org/) (WIP) 
 
 Supported G-Codes:
 
