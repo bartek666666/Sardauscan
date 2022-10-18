@@ -232,7 +232,15 @@ void M22()
 void M100()
 /*M100 - Show Help Message*/
 {
-
+    Serial.println("G01 [T(steps)] - Move the Turntable for number of steps");
+    Serial.println("M4 [R(value) G(value) B(value)] - Turn on LED Ring for given RGB-Vlaues");
+    Serial.println("M17 - Enable Motors");
+    Serial.println("M18 - Disable Motors");
+    Serial.println("M19 - Turn On Laser 0");
+    Serial.println("M20 - Turn Off Laser 0");
+    Serial.println("M21 - Turn On Laser 1");
+    Serial.println("M22 - Turn Off Laser 1");
+    Serial.println("M100 - Show Help Message");
 }
 
 
