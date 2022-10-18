@@ -196,37 +196,49 @@ void M04()
 void M17()
 /*M17 - Enable Motors*/
 {
-
+    stepper1.enableOutputs();
 }
 
 void M18()
 /*M18 - Disable Motors*/
 {
-
+    stepper1.disableOutputs();
 }
 
 void M19()
 /*M19 - Turn On Laser 0*/
 {
-
+    int laserState = 1;
+    int pin =getLaserPin(0);
+    if(pin>=0)
+        digitalWrite( pin, laserState==1?HIGH:LOW);
 }
 
 void M20()
 /*M20 - Turn Off Laser 0*/
 {
-
+    int laserState = 0;
+    int pin =getLaserPin(0);
+    if(pin>=0)
+        digitalWrite( pin, laserState==1?HIGH:LOW);
 }
 
 void M21()
 /*M21 - Turn On Laser 1*/
 {
-
+    int laserState = 1;
+    int pin =getLaserPin(1);
+    if(pin>=0)
+        digitalWrite( pin, laserState==1?HIGH:LOW);
 }
 
 void M22()
 /*M22 - Turn Off Laser 1*/
 {
-
+    int laserState = 0;
+    int pin =getLaserPin(1);
+    if(pin>=0)
+        digitalWrite( pin, laserState==1?HIGH:LOW);
 }
 
 void M100()
