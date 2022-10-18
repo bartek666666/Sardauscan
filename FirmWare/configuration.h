@@ -1,7 +1,7 @@
 #ifndef CONFIGURATION_h
 #define CONFIGURATION_h
 
-#define FIRMWARE_VERSION "Sardauscan V0.1a"
+#define FIRMWARE_VERSION "Sardauscan V0.1b"
 
 #define SERIAL_BAUD 115200
 //57600
