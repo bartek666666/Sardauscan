@@ -31,6 +31,10 @@
 //Max DC Current per I/O Pin - 40mA
 //Max DC Current per 3V Pin - 50mA
 
+// conteroll definition
+//#define SARDAUSCAN
+//#define FABSCANPI
+
 #endif
 
 
