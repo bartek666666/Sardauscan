@@ -179,6 +179,10 @@ void setup() {
   SCmd.addCommand("t",TableCommand);
   SCmd.addCommand("L",LaserCommand);
   SCmd.addCommand("l",LaserCommand);
+  SCmd.addCommand("G",Gcode);
+  SCmd.addCommand("g",Gcode);
+  SCmd.addCommand("M",Gcode);
+  SCmd.addCommand("m",Gcode);
   SCmd.addDefaultHandler(Hun);
   Serial.println(FIRMWARE_VERSION);
   Serial.flush();
