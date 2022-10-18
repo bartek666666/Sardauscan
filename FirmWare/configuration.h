@@ -16,7 +16,8 @@
 //If anyone else is having problems with a BYJ48 stepper not doing anything, 
 //change the HALFSTEP value to 4 & REVOLUTION_STEP to 2048
 #define HALFSTEP 8
-#define REVOLUTION_STEP 4072
+//#define REVOLUTION_STEP 4072 - probably wrong value
+#define REVOLUTION_STEP 4096
 #define STEP_BY_MINMOVE 4  // move by STEP_BY_MINMOVE (to avoid power loss when position is between step) 
 
 #define LASER_COUNT 4
@@ -24,6 +25,11 @@
 #define LASER_PIN_2 A2 //orange
 #define LASER_PIN_3 A3 //green
 #define LASER_PIN_4 13 //blue
+
+//#define LED_COUNT 1
+//#define LED_PIN xx
+//Max DC Current per I/O Pin - 40mA
+//Max DC Current per 3V Pin - 50mA
 
 #endif
 
