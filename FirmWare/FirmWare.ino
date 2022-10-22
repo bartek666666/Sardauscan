@@ -300,9 +300,14 @@ void setup() {
   Serial.println(FIRMWARE_VERSION);
   Serial.flush();
 }
-
+// manual scann for David 4
+pinMode(6, INPUT_PULLUP);      // Push-Button
 
 void loop() {
+	// manual scann for David 4
+	bool buttonState = digitalRead(6);  // store current state of pin 6
+	digitalWrite(A1,buttonState); // turn on laser 1
+		
 	SCmd.readSerial();     // We don't do much, just process serial commands
         Serial.flush();
 }
